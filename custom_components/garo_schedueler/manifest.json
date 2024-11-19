@@ -1,6 +1,16 @@
 {
-    "domain": "garo_schedueler",
-    "name": "Garo Schedueler",
-    "version": "0.1.0",
-    "config_flow": false
-  }
+  "domain": "garo_schedueler",
+  "name": "Garo Schedueler",
+  "codeowners": [
+    "@tyre88"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/integrations/garo_schedueler",
+  "homekit": {},
+  "iot_class": "local_polling",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "integration_type": "helper"
+}
