@@ -1,0 +1,11 @@
+*.DS_Store
+custom_components/garo_scheduele/__pycache__/*
+.vscode
+custom_components/garo_scheduele/frontend/node_modules
+custom_components/garo_scheduele/card/node_modules
+._*
+README.html
+package-lock.json
+custom_components/garo_scheduele/__pycache__/*
+*__pycache__**
+*.pyc
