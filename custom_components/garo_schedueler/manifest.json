@@ -2,5 +2,5 @@
     "domain": "garo_schedueler",
     "name": "Garo Schedueler",
     "version": "0.1.0",
-    "config_flow": true
+    "config_flow": false
   }
