@@ -6,6 +6,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 
+DOMAIN = "garo_schedueler"
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Garo Schedueler from a config entry."""
@@ -17,17 +18,17 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     await hass.config_entries.async_forward_entry_setups(entry, (Platform.SENSOR,))
 
     # TODO Remove if the integration does not have an options flow
-    entry.async_on_unload(entry.add_update_listener(config_entry_update_listener))
+    # entry.async_on_unload(entry.add_update_listener(config_entry_update_listener))
 
     return True
 
 
 # TODO Remove if the integration does not have an options flow
-async def config_entry_update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
-    """Update listener, called when the config entry options are changed."""
-    await hass.config_entries.async_reload(entry.entry_id)
+# async def config_entry_update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
+#     """Update listener, called when the config entry options are changed."""
+#     await hass.config_entries.async_reload(entry.entry_id)
 
 
-async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Unload a config entry."""
-    return await hass.config_entries.async_unload_platforms(entry, (Platform.SENSOR,))
+# async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+#     """Unload a config entry."""
+#     return await hass.config_entries.async_unload_platforms(entry, (Platform.SENSOR,))
