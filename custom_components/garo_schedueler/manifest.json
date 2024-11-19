@@ -6,5 +6,5 @@
   ],
   "config_flow": true,
   "dependencies": [],
-  "integration_type": "helper"
+  "integration_type": "sensor"
 }
