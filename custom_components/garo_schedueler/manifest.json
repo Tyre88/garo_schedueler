@@ -1,10 +1,5 @@
 {
-  "domain": "garo_schedueler",
-  "name": "Garo Schedueler",
-  "codeowners": [
-    "@tyre88"
-  ],
-  "config_flow": true,
-  "dependencies": [],
-  "integration_type": "sensor"
+  "domain": "hello_state",
+  "name": "Hello, state!",
+  "version": "0.1.0"
 }
