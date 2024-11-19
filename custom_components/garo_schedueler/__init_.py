@@ -1,34 +1,28 @@
-"""The Garo Schedueler integration."""
+"""
+The "hello world" custom component.
 
+This component implements the bare minimum that a component should implement.
+
+Configuration:
+
+To use the hello_world component you will need to add the following to your
+configuration.yaml file.
+
+hello_world:
+"""
 from __future__ import annotations
 
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers.typing import ConfigType
 
-DOMAIN = "garo_schedueler"
+# The domain of your component. Should be equal to the name of your component.
+DOMAIN = "hello_world"
 
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up Garo Schedueler from a config entry."""
-    # TODO Optionally store an object for your platforms to access
-    # entry.runtime_data = ...
 
-    # TODO Optionally validate config entry options before setting up platform
+def setup(hass: HomeAssistant, config: ConfigType) -> bool:
+    """Set up a skeleton component."""
+    # States are in the format DOMAIN.OBJECT_ID.
+    hass.states.set('hello_world.Hello_World', 'Works!')
 
-    await hass.config_entries.async_forward_entry_setups(entry, (Platform.SENSOR,))
-
-    # TODO Remove if the integration does not have an options flow
-    # entry.async_on_unload(entry.add_update_listener(config_entry_update_listener))
-
+    # Return boolean to indicate that initialization was successfully.
     return True
-
-
-# TODO Remove if the integration does not have an options flow
-# async def config_entry_update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
-#     """Update listener, called when the config entry options are changed."""
-#     await hass.config_entries.async_reload(entry.entry_id)
-
-
-# async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-#     """Unload a config entry."""
-#     return await hass.config_entries.async_unload_platforms(entry, (Platform.SENSOR,))

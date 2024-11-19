@@ -1,16 +1,10 @@
 {
-  "domain": "garo_schedueler",
-  "name": "Garo Schedueler",
-  "codeowners": [
-    "@tyre88"
-  ],
-  "config_flow": true,
+  "domain": "hello_world",
+  "name": "Hello World",
+  "codeowners": [],
   "dependencies": [],
-  "documentation": "https://www.home-assistant.io/integrations/garo_schedueler",
-  "homekit": {},
+  "documentation": "https://github.com/home-assistant/example-custom-config/tree/master/custom_components/hello_world/",
   "iot_class": "local_polling",
   "requirements": [],
-  "ssdp": [],
-  "zeroconf": [],
-  "integration_type": "helper"
+  "version": "0.1.0"
 }
